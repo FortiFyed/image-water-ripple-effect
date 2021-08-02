@@ -1,0 +1,19 @@
+{
+  "name": "threejs-starter-template",
+  "version": "1.0.0",
+  "description": "a basic threejs starter template",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaboSuke/threejs-starter-template.git"
+  },
+  "author": "Essam Abed",
+  "license": "No License",
+  "bugs": {
+    "url": "https://github.com/SaboSuke/threejs-starter-template/issues"
+  },
+  "homepage": "https://github.com/SaboSuke/threejs-starter-template#readme"
+}
