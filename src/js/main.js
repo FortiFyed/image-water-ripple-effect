@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js'
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js'
-import Shaders from './shaders.js'
+import Shader from './shaders.js'
 
 const rand = (a, b) => a + (b - a) * Math.random()
 
@@ -32,7 +32,6 @@ export default class Animate extends Shader{
         this.renderer = new THREE.WebGLRenderer({ antialias: true })
         this.renderer.setSize(window.innerWidth, window.innerHeight)
         document.querySelector('.container').appendChild(this.renderer.domElement)
-        // this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     }
 
     initCamera(){
@@ -92,7 +91,7 @@ export default class Animate extends Shader{
 	}
 
     createMesh(){
-        const texture = this.loadTexture('hands.jpg')
+        const texture = this.loadTexture('image.jpg')
         this.material = new THREE.ShaderMaterial({ 
             fragmentShader: this.getFragment(),
             vertexShader: this.getVertex(),
@@ -109,7 +108,7 @@ export default class Animate extends Shader{
             transparent: true,
         })
 
-        this.geometry = new THREE.PlaneGeometry(5, 5, 5);
+        this.geometry = new THREE.PlaneGeometry(15, 7, 5);
         this.mesh = new THREE.Mesh(this.geometry, this.material)
         this.scene.add(this.mesh)
 
